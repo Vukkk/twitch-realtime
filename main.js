@@ -72,7 +72,7 @@ class TwitchRealtime extends EventEmitter {
             /**
              * Fired when the connection to twitch was lost.
              * @event TwitchRealtime#close
-             * @prop {Boolean} If twitch-realtime will try to reconnect automatically or not.
+             * @prop {Boolean} autoreconnect If twitch-realtime will try to reconnect automatically or not.
              */
             this.emit('close', this._autoreconnect);
         });
