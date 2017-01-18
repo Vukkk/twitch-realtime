@@ -229,7 +229,7 @@ class TwitchRealtime extends EventEmitter {
                     clearTimeout(this._pingTimeout);
                     this._pingTimeout = null;
                 }
-                else if (msg.type === 'RECONNECT') this._reconnect();
+                else if (msg.type === 'RECONNECT') this._reconnect(1000);
                 else this.emit('warn', 'Received unknown message type. Maybe this package is outdated?');
             } catch (e) {
                 /**
